@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Mes devis</title>
+  <meta name="description" content="Logiciel de devis pour électricien : articles Rexel, marges, main-d'œuvre et devis PDF.">
+  <meta name="theme-color" content="#1d4ed8">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Mes devis">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="apple-touch-icon" href="icones/icone-180.png">
+  <link rel="icon" href="icones/icone-192.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="entete">
+    <div class="entete-in">
+      <span class="logo-app">⚡</span>
+      <span id="titre-page">Mes devis</span>
+    </div>
+  </header>
+
+  <main id="app" class="contenu"></main>
+
+  <nav class="onglets" aria-label="Menu">
+    <a href="#/devis" data-onglet="devis"><span class="ico">📄</span>Devis</a>
+    <a href="#/articles" data-onglet="articles"><span class="ico">🔌</span>Articles</a>
+    <a href="#/reglages" data-onglet="reglages"><span class="ico">⚙️</span>Réglages</a>
+  </nav>
+
+  <div id="voile" class="voile" hidden></div>
+  <section id="feuille" class="feuille" hidden role="dialog" aria-modal="true"></section>
+  <div id="toast" class="toast" hidden></div>
+  <input type="file" id="fichier-restaurer" accept="application/json,.json" hidden>
+  <input type="file" id="fichier-logo" accept="image/*" hidden>
+
+  <script src="vendor/jspdf.umd.min.js"></script>
+  <script src="vendor/jspdf.plugin.autotable.min.js"></script>
+  <script src="prix.js"></script>
+  <script src="app.js"></script>
+  <script src="pdf.js"></script>
+</body>
+</html>
